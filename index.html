@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="/css/style.css?v=1.0"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Saira:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+<style>
+  /* Apply black theme to the entire webpage */
+body {
+    background-color: #001328 !important;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+  
+    <header>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark  fixed-top" id="navbar">
+          <a href="/index.html">
+          <img class="header-logo " src="assets/logo.png" alt="logo" /></a>
+            <button class="custom-toggler d-lg-none" id="checkbox" type="checkbox" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">           
+                              <div class="bars" id="bar1"></div>
+                              <div class="bars" id="bar2"></div>
+                              <div class="bars" id="bar3"></div>
+                         
+              </button>
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="custom-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+               
+                <div>
+                    <div class="offcanvas-body custom-offcanvas-body">
+                        <ul class="navbar-nav mx-auto flex-grow-1 pe-5 ps-5">
+                            <ul class="navbar-nav justify-content-top flex-grow-1">
+                                <li class="nav-item"><a class="nav-link active" aria-current="page" href="/index.html" >Home</a>                 
+                </li>               
+                <li class="nav-item dropdown"><a
+                    class="nav-link dropdown-toggle"
+                    href="/services.html"
+                    role="button">
+                    Services
+                  </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark custom-dropdown-menu" id="navbar-dropdown-item">
+                                        <li><a class="dropdown-item custom-dropdown-item mb-3 mt-2" href="/seo-service.html">SEO Services</a></li>
+                                        <li><a class="dropdown-item custom-dropdown-item mb-3" href="/digital-marketing-services.html">Full Stack Digital Marketing</a>
+                                        </li>
+                                        <li><a class="dropdown-item custom-dropdown-item mb-3" href="/link-building-services.html">Link Building</a>
+                                        </li>
+                                        <li><a class="dropdown-item custom-dropdown-item mb-3" href="/social-media-marketing-service.html">Social Media Marketing</a>
+                                        </li>
+                                        <li><a class="dropdown-item custom-dropdown-item mb-3" href="/performance-marketing-service.html">Performance Marketing</a>
+                                        </li>
+                                        <li><a class="dropdown-item custom-dropdown-item mb-3" href="/uiux-design-services.html">UIUX Design</a>
+                                        </li>
+                                        <li><a class="dropdown-item custom-dropdown-itemmb-3" href="/web-development-services.html">Web Development</a>
+                                        </li>
+                                    </ul>
+                                    <li class="nav-item"><a class="nav-link" href="/about-us.html">About</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="/portfolio.html">Portfolio</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Blog</a>
+                                    </li>
+                            </ul>
+                            <a href="/contact.html">
+                              <button class="custom-btn" id="navbar-btn" type="button">Get in Touch</button>
+                            </a>
+                            <!-- <button class="custom-btn" id="navbar-btn" type="submit">Get in Touch</button> -->
+                    </div>
+                </div>
+              </div>
+        </nav>
+        <!-- navbar -->
+    </header>
+       <!-- Hero Section -->
+    <div class="bg-animation" >
+      <div class="stars"></div> 
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000"> 
+            <div class="color-circle"></div>   
+            <div class="carousel-inner">    
+                <div class="carousel-item active">
+                    <div class="hero-section">           
+                        <div class="hero-content">
+                            <h1>Driving growth with <span class="highlight">AI</span>.</h1>
+                            <p>We craft workflow automations and bespoke AI solutions for forward-thinking companies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-section">
+                        <div class="hero-content">
+                            <h2>Unlock the power of <span class="highlight">Automation</span>.</h2>
+                            <p>Streamline your processes with cutting-edge solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-section">
+                        <div class="hero-content">
+                            <h2>Transform your business with <span class="highlight">Data</span>.</h2>
+                            <p>Turn insights into action with powerful analytics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-buttons"><a href="/services.html" class="btn primary-btn">Our services</a><a href="/contact.html" class="btn secondary-btn">Get in touch</a>
+            </div>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section -->
+
+    <!-- Section 1 -->
+    <section  class="section2">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="section-title">Who Are We at the Core?</h2>
+          </div>
+        </div>
+        <div class="row" id="section2-btn">
+          <div class="col" id="section3-btn">
+            <p class="section-text"> We’re a team of passionate problem-solvers, tech experts, and creative minds who came together with a goal to help businesses and break through their challenges and thrive in a digital world. Born from a shared enthusiasm for innovation, we’ve combined our expertise to offer a range of services, from SEO and link building to web development, UI/UX design, and beyond. Think of us as your go-to partners who not only understand your business needs but also bring solutions that deliver results, all with a personal touch.</p>
+            <br> 
+          <a href="/about-us.html">  <button class="custom-btn" id="navbar1-btn" type="submit">Know More</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+      <!-- Section 1 -->
+
+      <!-- Section 2 -->
+      <div class="loader">
+        <h2>Edge Dynamiq Offers</h2>
+        <div class="words"><span class="word">SEO</span><span class="word">PERFORMANCE MARKETING</span><span class="word">WEB DEVELOPMENT</span><span class="word">UI/UX DESIGN</span><span class="word">LINK BUILDING</span><span class="word">DIGITAL MARKETING</span><span class="word">RPA</span><span class="word">SMM</span>
+        </div>
+      </div>
+<section class="services-section py-5">
+  <div class="container">
+    <!-- sub Service 1 -->
+    <div class="row align-items-center mb-4 service-item" id="seoservice" data-target="#service1-details">
+      <div class="col-md-1 service-number">01</div>
+      <div class="col-md-8">
+        <h3>SEO (Search Engine Optimization)</h3>
+        <p class="short-description">We follow the RIBA Plan of Work 2020 to ensure an orderly framework and project clarity from the outset...</p>
+      </div>
+      <div class="col-md-3 text-right">
+        <button class="arrow-btn" >
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div id="service1-details" class="service-details" style="display: none;">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="short-description">Here we conduct feasibility studies and a project review to mitigate risks...</p>
+          <a href="/seo-service.html" class="service-details-btn">Explore More</a>
+        </div>
+        <div class="col-md-6">
+          <img src="/assets/6268643.jpg" class="img-fluid" alt="Expanded De-risking project image">
+        </div>
+      </div>
+    </div>
+    
+    <hr />
+    <!-- sub Service 2 -->
+    <div class="row align-items-center mb-4 service-item" id="seoservice" data-target="#service2-details">
+      <div class="col-md-1 service-number">02</div>
+      <div class="col-md-8">
+        <h3>PERFORMANCE MARKETING</h3>
+        <p class="short-description">This process is led either by a chartered planning consultant or architect...</p>
+      </div>
+      <div class="col-md-3 text-right">
+        <button class="arrow-btn" >
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div id="service2-details" class="service-details" style="display: none;">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="short-description">During this phase, we develop concept designs and planning strategies...</p>
+          <a href="/performance-marketing-service.html" class="service-details-btn">Explore More</a>
+        </div>
+        <div class="col-md-6"><img src="/assets/6268643.jpg" class="img-fluid" alt="Expanded Planning strategies image">
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!-- sub Service 3 -->
+    <div class="row align-items-center mb-4 service-item" id="seoservice" data-target="#service3-details">
+      <div class="col-md-1 service-number">03</div>
+      <div class="col-md-8">
+        <h3>LINK BUILDING</h3>
+        <p class="short-description">During this phase the design is developed to meet the required standards...</p>
+      </div>
+      <div class="col-md-3 text-right">
+        <button class="arrow-btn" >
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div id="service3-details" class="service-details" style="display: none;">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="short-description">We ensure that the project meets all investment goals and delivers on ROI...</p>
+          <a href="/link-building-services.html" class="service-details-btn">Explore More</a>
+        </div>
+        <div class="col-md-6"><img src="/assets/6268643.jpg" class="img-fluid" alt="Expanded Return on investment image">
+        </div>
+      </div>
+    </div>
+    <hr />
+     <!-- sub Service 4 -->
+     <div class="row align-items-center mb-4 service-item" id="seoservice" data-target="#service4-details">
+      <div class="col-md-1 service-number">04</div>
+      <div class="col-md-8">
+        <h3>DIGITAL MARKETING</h3>
+        <p class="short-description">During this phase the design is developed to meet the required standards...</p>
+      </div>
+      <div class="col-md-3 text-right">
+        <button class="arrow-btn">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div id="service4-details" class="service-details" style="display: none;">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="short-description">We ensure that the project meets all investment goals and delivers on ROI...</p>
+          <a href="/digital-marketing-services.html" class="service-details-btn">Explore More</a>
+        </div>
+        <div class="col-md-6"><img src="/assets/6268643.jpg" class="img-fluid" alt="Expanded Return on investment image">
+        </div>
+      </div>
+    </div>
+    <hr />
+     <!-- sub Service 5 -->
+     <div class="row align-items-center mb-4 service-item" id="seoservice" data-target="#service5-details">
+      <div class="col-md-1 service-number">05</div>
+      <div class="col-md-8">
+        <h3>UI/UX DESIGN</h3>
+        <p class="short-description">During this phase the design is developed to meet the required standards...</p>
+      </div>
+      <div class="col-md-3 text-right">
+        <button class="arrow-btn">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div id="service5-details" class="service-details" style="display: none;">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="short-description">We ensure that the project meets all investment goals and delivers on ROI...</p>
+          <a href="/uiux-design-services.html" class="service-details-btn">Explore More</a>
+        </div>
+        <div class="col-md-6"><img src="/assets/6268643.jpg" class="img-fluid" alt="Expanded Return on investment image">
+        </div>
+      </div>
+    </div>
+    <hr />
+     <!-- sub Service 6 -->
+     <div class="row align-items-center mb-4 service-item" id="seoservice" data-target="#service6-details">
+      <div class="col-md-1 service-number">06</div>
+      <div class="col-md-8">
+        <h3>WEB DEVELOPMENT</h3>
+        <p class="short-description">During this phase the design is developed to meet the required standards...</p>
+      </div>
+      <div class="col-md-3 text-right">
+        <button class="arrow-btn">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div id="service6-details" class="service-details" style="display: none;">
+      <div class="row">
+        <div class="col-md-6">
+          <p>We ensure that the project meets all investment goals and delivers on ROI...</p>
+          <a href="/web-development-services.html" class="service-details-btn">Explore More</a>
+        </div>
+        <div class="col-md-6"><img src="/assets/6268643.jpg" class="img-fluid" alt="Expanded Return on investment image">
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!-- sub Service 8 -->
+    <div class="row align-items-center mb-4 service-item" id="seoservice" data-target="#service8-details">
+      <div class="col-md-1 service-number">07</div>
+      <div class="col-md-8">
+        <h3>SOCIAL MEDIA MARKETING</h3>
+        <p class="short-description">During this phase the design is developed to meet the required standards...</p>
+      </div>
+      <div class="col-md-3 text-right">
+        <button class="arrow-btn">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div id="service8-details" class="service-details" style="display: none;">
+      <div class="row">
+        <div class="col-md-6">
+          <p>We ensure that the project meets all investment goals and delivers on ROI...</p>
+          <a href="/social-media-marketing-service.html" class="service-details-btn">Explore More</a>
+        </div>
+        <div class="col-md-6"><img src="/assets/6268643.jpg" class="img-fluid" alt="Expanded Return on investment image">
+        </div>
+      </div>
+    </div>
+    <hr />
+ <!-- sub Service 7 -->
+ <div class="row align-items-center mb-4 service-item" id="seoservice" data-target="#service7-details">
+  <div class="col-md-1 service-number">08</div>
+  <div class="col-md-8">
+    <h3>RPA (Robotic Process Automation)</h3>
+    <p class="short-description">During this phase the design is developed to meet the required standards...</p>
+  </div>
+  <div class="col-md-3 text-right">
+    <button class="arrow-btn">
+      <i class="fas fa-arrow-right"></i>
+    </button>
+  </div>
+</div>
+<div id="service7-details" class="service-details" style="display: none;">
+  <div class="row">
+    <div class="col-md-6">
+      <p class="short-description">We ensure that the project meets all investment goals and delivers on ROI...</p>
+      <a href="/rpa.html" class="service-details-btn">Explore More</a>
+    </div>
+    <div class="col-md-6"><img src="/assets/6268643.jpg" class="img-fluid" alt="Expanded Return on investment image">
+    </div>
+  </div>
+</div>
+<div class="services-link">
+  <a href="/services.html" class="btn primary-btn">View All Services</a>
+</div>
+  </div>
+</section>
+       <!-- Section 2 -->
+
+<!-- section 3-->
+<section class="portfolio-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <img src="/assets/6268643.jpg" alt="Your Image" class="img-fluid profile-img">
+      </div>
+      <div class="col-md-8">
+        <h2 id="spn">Your Go-To SEO Expert</h2>
+        <p>I'm an SEO & Digital Marketing Expert with 5+ years of experience delivering tailored digital solutions. I specialize in SEO strategies, website optimization, and content development, helping businesses grow their online presence and drive tangible results.</p>
+
+        <!-- Highlight Work -->
+        <div class="portfolio-details">
+          <h4 id="spn">Recent Projects</h4>
+          <ul >
+            <li><span id="spn">Project 1: </span> SEO & Link Building for Khan Tutorial – Increased organic traffic by 65% in 6 months.</li>
+            <li><span id="spn">Project 2: </span> Website Revamp & Content Development for Mindbox Training – Reduced bounce rate by 40% and drove 200+ unique visitors in 3 months.</li>
+            <li><span id="spn">Project 3: </span> SEO Audit & Optimization for Dreams – Improved site speed by 45% and optimised technical SEO</li>
+          </ul>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="mt-4" id="portfolio-cta">
+          <a href="/portfolio.html" target="_blank" class="btn secondary-btn">View My Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- section 3-->
+
+<!-- section 5 -->
+<section class="ezy__numbers7">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-md-9">
+        <h2 class="ezy__numbers7-heading mb-4">Your Success, Our Priority</h2>
+        <p class="ezy__numbers7-sub-heading">
+          We’re here to back you with full-service solutions, round-the-clock support, and a growth strategy that covers all bases. No Shortcuts, Just Results!
+        </p>
+      </div>
+    </div>
+    <div class="row text-center mt-5">
+      <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
+        <h3 class="mb-3">100%</h3>
+        <h5>Solutions for Every Project</h5>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
+        <h3 class="mb-3">24/7</h3>
+        <h5>Dedicated Support</h5>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
+        <h3 class="mb-3">100%</h3>
+        <h5>Commitment to Transparency</h5>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
+        <h3 class="mb-3">360°</h3>
+        <h5>Digital Strategy for Holistic Growth</h5>
+      </div>
+    </div>
+  </div>
+</section> 
+<!-- section 5 -->
+
+<!-- section 6 -->
+<section id="best-practices" class="py-5">
+  <div class="container text-white">
+      <div class="row text-center mb-4">
+          <div class="col" id="best-practices-text">
+              <h2 class="section-title">Our Best Practices</h2>
+              <p class="section-subtitle">Discover the strategies that drive our success and your results.</p>
+          </div>
+      </div>
+      <div class="row">
+          <!-- Practice Item 1 -->
+          <div class="col-md-4">
+              <div class="practice-item">
+                  <div class="practice-img-container">
+                      <img src="/assets/6268643.jpg" alt="Data-Driven" class="img-fluid">
+                      <div class="practice-overlay">
+                          <h4>Data-Driven Strategy</h4>
+                      </div>
+                  </div>
+                  <p>We leverage in-depth analytics to tailor data-driven strategies that deliver measurable results.</p>
+              </div>
+          </div>
+
+          <!-- Practice Item 2 -->
+          <div class="col-md-4">
+              <div class="practice-item">
+                  <div class="practice-img-container">
+                      <img src="/assets/6268643.jpg" alt="Holistic Approach" class="img-fluid">
+                      <div class="practice-overlay">
+                          <h4>Holistic Approach</h4>
+                      </div>
+                  </div>
+                  <p>Our integrated digital marketing approach covers all bases to ensure maximum impact and reach.</p>
+              </div>
+          </div>
+
+          <!-- Practice Item 3 -->
+          <div class="col-md-4">
+              <div class="practice-item">
+                  <div class="practice-img-container">
+                      <img src="/assets/6268643.jpg" alt="Performance Monitoring" class="img-fluid">
+                      <div class="practice-overlay">
+                          <h4>Performance Monitoring</h4>
+                      </div>
+                  </div>
+                  <p>We monitor and optimize campaigns continuously to maximize performance and ROI.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- section 6 -->
+
+  <!-- testimonials -->
+  <section id="testim" class="testim">
+    <div class="testim-cover">
+       <div class="wrap">
+
+           <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+           <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+           <ul id="testim-dots" class="dots">
+               <li class="dot active"></li><!--
+               --><li class="dot"></li><!--
+               --><li class="dot"></li><!--
+               --><li class="dot"></li><!--
+               --><li class="dot"></li>
+           </ul>
+           <div id="testim-content" class="cont">
+               
+               <div class="active">
+                   <div class="img"><img src="/assets/mindbox.svg" alt=""></div>
+                   <h2>Mindbox Training</h2>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+               </div>
+
+               <div>
+                   <div class="img"><img src="/assets/KTLOGO30Y-2048x576.png" alt=""></div>
+                   <h2>Khan Tutorial</h2>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+               </div>
+
+               <div>
+                   <div class="img"><img src="https://p16.muscdn.com/img/musically-maliva-obj/1627333501517830~c5_720x720.jpeg" alt=""></div>
+                   <h3>Lorem Ipsum</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+               </div>
+
+               <div>
+                   <div class="img"><img src="https://p16-sg-default.akamaized.net/aweme/1080x1080/tiktok-obj/1666413671597057.jpeg" alt=""></div>
+                   <h3>Lorem De Ipsum</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+               </div>
+
+               <div>
+                   <div class="img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSKLJe1Lrz2N3ufVSwQokSJ79jGBbIptXuVnsdxMmNUlE14ohwp&usqp=CAU" alt=""></div>
+                   <h3>Ms. Lorem R. Ipsum</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+               </div>
+
+           </div>
+
+       </div>
+    </div>
+</section>
+  <!-- testimonial -->
+   
+ <!-- section 7 -->
+ <section id="faqs" class="py-5">
+  <div class="container text-white">
+      <div class="row text-center mb-4">
+          <div class="col">
+              <h2 class="section-title">Frequently Asked Questions</h2>
+              <p class="section-subtitle">Find answers to some of the most common questions.</p>
+          </div>
+      </div>
+      <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <h5 class="accordion-header"  id="headingOne">What services do you offer?</h5>
+                  </button>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                      We offer a range of digital solutions including SEO, SEM, link building, PPC, web development, and UI/UX design.
+                  </div>
+              </div>
+          </div>
+          <div class="accordion-item">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                     <h5 class="accordion-header" id="headingTwo">How long does it take to see results?</h5> 
+                  </button>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                      Results vary based on the project, but typically, noticeable improvements happen within 3 to 6 months.
+                  </div>
+              </div>
+          </div>
+          <div class="accordion-item">
+
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <h5 class="accordion-header" id="headingTwo">Why choose your agency?</h5>
+                  </button>
+
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                      Our results-driven approach, deep expertise, and dedication to clients set us apart.
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+  <!-- section 7 -->
+
+  <!-- contact form -->
+    <div class="container" id="contact">
+        <div class="screen-body">
+          <div class="screen-body-item left">
+            <div class="app-title">
+              <h2><span>Ready to make things happen?</span></h2>
+           
+            </div>
+          </div>
+          <div class="screen-body-item">
+            <div class="app-form">
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="NAME">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="EMAIL">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="CONTACT NO">
+              </div>
+              <div class="app-form-group message">
+                <input class="app-form-control" placeholder="MESSAGE">
+              </div>
+              <div class="app-form-group buttons">
+                <button  class="app-form-button"><span>Let’s chat!</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  <!-- contact form -->
+
+   <!-- Footer -->   
+<footer class="footer-container">
+  <div class="container">
+    <div class="row justify-content-between py-3">
+      <div class="col-md-3 mb-4">
+        <div class="row d-flex align-items-center" id="foot-logo">
+         <a href="/index.html"> <img src="/assets/logo.png" class="footer-logo me-3" alt="Logo"></a>
+          <div>
+            <h5 class="hook-text">Your Growth Buddy Online</h5>
+            <p class="footer-subtext">Partner with us for next-level progress.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-2 mb-4 " id="explore">
+        <h6 class="footer-title">Explore</h6>
+        <ul class="footer-list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about-us.html">About</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/portfolio.html">Portfolio</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+
+
+      <div class="col-md-2 mb-4" id="footer-services">
+        <h6 class="footer-title">Our Services</h6>
+        <ul class="footer-list">  
+          <li><a href="/seo-service.html">SEO</a></li>
+          <li><a href="/link-building-services.html">Link Building</a></li>
+          <li><a href="/web-development-services.html">Web Development</a></li>
+          <li><a href="/uiux-design-services.html">UI/UX Design</a></li>
+          <li><a href="/performance-marketing-service.html">Performance Marketing</a></li>
+          <li><a href="/digital-marketing-services.html">Digital Marketing</a></li>
+          <li><a href="/rpa.html">RPA</a></li>
+        </ul>
+      </div>
+
+    
+      <div class="col-md-2 text-center" id="connect-us">
+        <h6 class="footer-title">Connect with Us</h6>
+        <div class="social-icons d-flex">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="divider my-4">
+    <div class="text-center">
+      <p class="copyright">&copy; 2024 Your Company Name. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+   <!-- Footer --> 
+
+<script src="js/main.js?v=1.0"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
